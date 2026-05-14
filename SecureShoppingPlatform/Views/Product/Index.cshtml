@@ -1,0 +1,22 @@
+@model List<Product>
+
+<h2>Product List</h2>
+
+<table class="table table-bordered">
+
+<tr>
+<th>Name</th>
+<th>Price</th>
+<th>Description</th>
+</tr>
+
+@foreach(var item in Model)
+{
+<tr>
+<td>@Html.Encode(item.Name)</td>
+<td>₹@item.Price</td>
+<td>@Html.Encode(item.Description)</td>
+</tr>
+}
+
+</table>

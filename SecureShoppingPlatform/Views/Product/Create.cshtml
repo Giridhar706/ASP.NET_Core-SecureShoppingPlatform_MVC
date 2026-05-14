@@ -1,0 +1,28 @@
+@model Product
+
+<h2>Add Product</h2>
+
+<form method="post">
+
+@Html.AntiForgeryToken()
+
+<div class="mb-3">
+<label>Name</label>
+<input asp-for="Name" class="form-control" />
+</div>
+
+<div class="mb-3">
+<label>Price</label>
+<input asp-for="Price" class="form-control" />
+</div>
+
+<div class="mb-3">
+<label>Description</label>
+<textarea asp-for="Description" class="form-control"></textarea>
+</div>
+
+<button class="btn btn-primary" type="submit">
+Save Product
+</button>
+
+</form>
